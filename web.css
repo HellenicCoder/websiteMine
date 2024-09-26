@@ -1,0 +1,206 @@
+/* Add Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+/* Update section styles */
+section {
+    font-family: 'Orbitron', sans-serif; /* Use Orbitron font */
+    text-transform: uppercase; /* Convert text to uppercase */
+    text-align: center; /* Center align text */
+    color: #fff; /* Set text color to white */
+    padding: 50px; /* Add padding */
+    position: relative; /* Position relative for shadows */
+}
+
+/* Add shadows to section headings */
+section h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add white shadow */
+}
+
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+    color: #fff;
+    background: #000;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header styles */
+header {
+    z-index: 9999;
+    position: relative;
+}
+
+#logo {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+}
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 500px;
+    margin: 0 auto;
+    top: 120px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 200px;
+    z-index: 9;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    padding: 10px 20px;
+    line-height: 1;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+    font-family: 'Futura', sans-serif; /* Use Futura font */
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+button {
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    transform: scale(0);
+}
+
+button span {
+    width: 40%;
+    background: #fff;
+    height: 2px;
+    display: block;
+    margin: 5px auto;
+    transform: scaleX(0);
+    transition: .6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s, .3s margin ease-in 0s;
+}
+
+button:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Sticky header styles */
+header.sticky #logo {
+    top: 0;
+    transform: scale(0.8);
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+
+header.sticky nav {
+    top: 20px;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+    transition-delay: 0.5s;
+}
+
+header.sticky button {
+    transform: scale(1);
+    transition-delay: 0.6s;
+}
+
+header.sticky a {
+    padding: 0;
+    opacity: 0;
+    letter-spacing: 0px;
+    transform: scale(0.3);
+    transition-delay: 0.2s;
+}
+
+/* Page section styles */
+section {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    position: relative;
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image within the section */
+    background-repeat: no-repeat; 
+}
+
+section h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add white shadow */
+}
+section:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 120px;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+}
+
+/* Fixed link styles */
+#fixedlink {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 20px;
+}
